@@ -1,8 +1,7 @@
 import React, { useState, useCallback, useRef } from "react";
 import produce from "immer";
 
-const numRows =
-  Math.round(window.innerHeight / 20) - Math.round(window.innerHeight / 400) - Math.round(3);
+const numRows = Math.round(window.innerHeight / 20) - Math.round(window.innerHeight / 400) - 8;
 const numCols = Math.round(window.innerWidth / 20) - Math.round(window.innerWidth / 400);
 
 //an array of operations
@@ -18,13 +17,17 @@ const operations = [
 ];
 
 const generateEmptyGrid = () => {
-  const rows = [];
-  //basically, create an array full of 0
-  for (let i = 0; i < numRows; i++) {
-    rows.push(Array.from(Array(numCols), () => 0));
-  }
+  const rows = Array(numRows)
+    .fill()
+    .map(() => Array(numCols).fill(0));
 
   return rows;
+  // const rows = [];
+  // //basically, create an array full of 0
+  // for (let i = 0; i < numRows; i++) {
+  //   rows.push(Array.from(Array(numCols), () => 0));
+  // }
+  // return rows;
 };
 
 const GameOfLife = () => {
@@ -79,7 +82,38 @@ const GameOfLife = () => {
   }, []);
 
   return (
-    <>
+    <div className="bg-secondary">
+      <div className="h-16"></div>
+      <div
+        className="w-full h-full justify-center"
+        style={{
+          //create the cols
+          display: "grid",
+          gridTemplateColumns: `repeat(${numCols}, 20px)`,
+        }}
+      >
+        {grid.map((rows, i) =>
+          rows.map((col, j) => (
+            <div
+              className="bg-primary text-primary"
+              key={`${i}-${j}`}
+              onClick={() => {
+                // when clicked, change value to 0 or 1, prdouce create a new mutable state
+                const newGrid = produce(grid, (gridCopy) => {
+                  gridCopy[i][j] = grid[i][j] ? 0 : 1;
+                });
+                setGrid(newGrid);
+              }}
+              style={{
+                width: 20,
+                height: 20,
+                backgroundColor: grid[i][j] ? "#5778B1" : undefined,
+                border: "solid 1px gray",
+              }}
+            />
+          )),
+        )}
+      </div>
       <div className="flex flex-row gap-4 p-4 justify-center">
         <button
           className="
@@ -108,7 +142,7 @@ const GameOfLife = () => {
           Random
         </button>
         <button
-          className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+          className="bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded"
           onClick={() => {
             setGrid(generateEmptyGrid());
           }}
@@ -116,36 +150,7 @@ const GameOfLife = () => {
           Clear
         </button>
       </div>
-      <div
-        className="w-full h-full justify-center"
-        style={{
-          //create the cols
-          display: "grid",
-          gridTemplateColumns: `repeat(${numCols}, 20px)`,
-        }}
-      >
-        {grid.map((rows, i) =>
-          rows.map((col, j) => (
-            <div
-              key={`${i}-${j}`}
-              onClick={() => {
-                // when clicked, change value to 0 or 1, prdouce create a new mutable state
-                const newGrid = produce(grid, (gridCopy) => {
-                  gridCopy[i][j] = grid[i][j] ? 0 : 1;
-                });
-                setGrid(newGrid);
-              }}
-              style={{
-                width: 20,
-                height: 20,
-                backgroundColor: grid[i][j] ? "#5778B1" : undefined,
-                border: "solid 1px gray",
-              }}
-            />
-          )),
-        )}
-      </div>
-    </>
+    </div>
   );
 };
 

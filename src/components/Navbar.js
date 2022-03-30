@@ -1,34 +1,86 @@
-import { ArrowRightIcon } from "@heroicons/react/solid";
 import React from "react";
+import { Toggle } from "./toggle";
 
-export default function Navbar() {
+const Navbar = ({ toggle, isOpen }) => {
   return (
-    <header className="bg-gray-800 md:sticky top-0 z-10">
-      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-        <nav className="title-font font-medium text-white mb-4 md:mb-0">
-          <a href="#about" className="ml-3 text-xl">
-            Mark Advento
-          </a>
-        </nav>
-        <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700	flex flex-wrap items-center text-base justify-center">
-          <a href="#projects" className="mr-5 hover:text-white">
-            Past Work
-          </a>
-          <a href="#skills" className="mr-5 hover:text-white">
-            Skills
-          </a>
-          {/* <a href="#testimonials" className="mr-5 hover:text-white">
-            Testimonials
-          </a> */}
-        </nav>
-        <a
-          href="#contact"
-          className="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0"
-        >
-          Hire Me
-          <ArrowRightIcon className="w-4 h-4 ml-1" />
+    <header
+      className="sticky top-0 flex justify-between items-center h-16 bg-secondary text-primary shadow-sm z-50"
+      role="navigation"
+    >
+      <div className="flex flex-row">
+        <a href="/#about">
+          <img
+            src="../logo.png"
+            alt="Blue A logo for Mark Advento"
+            className="h-8 ml-8 transition ease-in-out hover:scale-110"
+          />
         </a>
+        <a
+          href="/#about"
+          className="text-2xl ml-4 transition ease-in-out hover:scale-110 hover:text-accent"
+        >
+          mark.advento
+        </a>
+        <Toggle />
       </div>
+      <div className="p-4 cursor-pointer md:hidden" onClick={toggle}>
+        {!isOpen ? (
+          <svg
+            className="w-6 h-6 transition ease-in-out delay-150"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        ) : (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        )}
+      </div>
+      <nav className="pr-8 md:block hidden">
+        {/* p-4 transition ease-in-out hover:scale-110 hover:text-blue-800 */}
+        <a
+          href="/#about"
+          className="text-xl p-4 transition ease-in-out delay-5 0 hover:border-2 hover:border-primary hover:text-accent"
+        >
+          About
+        </a>
+        <a
+          className="text-xl p-4 transition ease-in-out  hover:border-2 hover:border-primary hover:text-accent"
+          href="/#projects"
+        >
+          Projects
+        </a>
+        <a
+          className="text-xl p-4 transition ease-in-out  hover:border-2 hover:border-primary hover:text-accent"
+          href="/#skills"
+        >
+          Skills
+        </a>
+        <a
+          className="text-xl p-4 transition ease-in-out  hover:border-2 hover:border-primary hover:text-accent"
+          href="/gameoflife"
+        >
+          Game of Life
+        </a>
+      </nav>
     </header>
   );
-}
+};
+
+export default Navbar;
