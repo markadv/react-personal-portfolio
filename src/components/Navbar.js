@@ -1,7 +1,28 @@
 import React from "react";
-import { Toggle } from "./toggle";
+import Menu from "./Menu";
+import { useSpring } from "react-spring";
 
-const Navbar = ({ toggle, isOpen }) => {
+const animationConfig = {
+  mass: 1,
+  frictionLight: 20,
+  frictionHeavy: 30,
+  tension: 575,
+  delay: 175,
+};
+
+const Navbar = ({ isOpen, toggle }) => {
+  const [styles, api] = useSpring(() => ({
+    transformTop: "translate(-6px, 10px) rotate(0deg)",
+    transformMiddle: "translate(-6px, 0px) rotate(0deg)",
+    transformBottom: "translate(-6px, -10px) rotate(0deg)",
+    widthTop: "24px",
+    widthBottom: "20px",
+    config: {
+      mass: animationConfig.mass,
+      friction: animationConfig.frictionHeavy,
+      tension: animationConfig.tension,
+    },
+  }));
   return (
     <header
       className="sticky top-0 flex justify-between items-center h-16 bg-secondary text-primary shadow-sm z-50"
@@ -21,10 +42,16 @@ const Navbar = ({ toggle, isOpen }) => {
         >
           mark.advento
         </a>
-        <Toggle />
       </div>
       <div className="p-4 cursor-pointer md:hidden" onClick={toggle}>
-        {!isOpen ? (
+        <Menu
+          open={isOpen}
+          toggle={toggle}
+          styles={styles}
+          api={api}
+          animationConfig={animationConfig}
+        />
+        {/* {!isOpen ? (
           <svg
             className="w-6 h-6 transition ease-in-out delay-150"
             fill="none"
@@ -50,7 +77,7 @@ const Navbar = ({ toggle, isOpen }) => {
           >
             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
           </svg>
-        )}
+        )} */}
       </div>
       <nav className="pr-8 md:block hidden">
         {/* p-4 transition ease-in-out hover:scale-110 hover:text-blue-800 */}

@@ -1,10 +1,10 @@
 import Navbar from "./components/Navbar.js";
-import Dropdown from "./components/Dropdown";
 import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages";
 import GameOfLife from "./pages/gol";
 import Footer from "./components/Footer.js";
+import Dropdown from "./components/Dropdown";
 
 export default function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +29,6 @@ export default function App() {
   return (
     //main initial style text-gray-400 bg-gray-900 body-font
     <main className="font-mono">
-      {/* <GameOfLife /> */}
       <Navbar toggle={toggle} isOpen={isOpen} />
       <Dropdown isOpen={isOpen} toggle={toggle} />
       <Routes>
