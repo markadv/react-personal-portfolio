@@ -4,23 +4,23 @@ import { skills } from "../data";
 
 export default function Skills() {
   return (
-    <section className="h-screen bg-primary" id="skills">
+    <section className="bg-primary lg:h-screen" id="skills">
       <div className="h-16"></div>
-      <div className="container w-full h-full px-5 py-10 mx-auto">
-        <div className="text-center mb-20">
-          <ChipIcon className="w-10 inline-block mb-4" />
-          <h1 className="sm:text-4xl text-3xl font-medium title-font text-primary mb-4">
+      <div className="container mx-auto h-full w-full px-5 py-10">
+        <div className="mb-20 text-center">
+          <ChipIcon className="mb-4 inline-block w-10" />
+          <h1 className="title-font mb-4 text-3xl font-medium text-primary sm:text-4xl">
             Skills &amp; Technologies
           </h1>
-          <p className="text-xl text-secondary leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
+          <p className="mx-auto text-xl leading-relaxed text-secondary lg:w-3/4 xl:w-2/4">
             These are the skills and tech that I have learned.
           </p>
         </div>
-        <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
+        <div className="-mx-2 flex flex-wrap sm:mx-auto sm:mb-2 lg:w-4/5">
           {skills.map((skill) => (
-            <div key={skill} className="p-2 sm:w-1/2 w-full">
-              <div className="bg-secondary rounded flex p-4 h-full items-center">
-                <BadgeCheckIcon className="text-accent w-6 h-6 flex-shrink-0 mr-4" />
+            <div key={skill} className="w-full p-2 sm:w-1/2">
+              <div className="flex h-full items-center rounded bg-secondary p-4">
+                <BadgeCheckIcon className="mr-4 h-6 w-6 flex-shrink-0 text-accent" />
                 <span className="title-font text-xl font-medium text-primary">{skill}</span>
               </div>
             </div>
