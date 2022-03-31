@@ -2,6 +2,7 @@ import React from "react";
 import { useDarkMode } from "./useDarkMode";
 import Typewriter from "typewriter-effect";
 import SamuraiSVG from "./SamuraiSVG";
+import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 
 export default function About() {
   const [isDark, setIsDark] = useDarkMode();
@@ -52,21 +53,31 @@ export default function About() {
           <p className="mb-8 text-xl leading-relaxed text-accent">
             I'm a career-shifter who has recently started my journey as a programmer.
           </p>
-          <div className="flex justify-center">
-            <a
-              href="#projects"
-              className="delay-50 inline-flex rounded border-0 bg-secondary py-2 px-6 text-lg text-accent transition 
+          <div className="flex flex-col justify-center">
+            <div className="flex flex-row">
+              <a
+                href="#projects"
+                className="delay-50 inline-flex rounded border-0 bg-secondary py-2 px-6 text-lg text-accent transition 
               ease-in-out hover:scale-105 hover:bg-accent hover:text-primary focus:outline-none"
-            >
-              See My Past Work
-            </a>
-            <a
-              href="#skills"
-              className="delay-50 ml-4 inline-flex rounded border-0 bg-secondary py-2 px-6 text-lg text-accent 
+              >
+                See My Past Work
+              </a>
+              <a
+                href="#skills"
+                className="delay-50 ml-4 inline-flex rounded border-0 bg-secondary py-2 px-6 text-lg text-accent 
               transition ease-in-out hover:scale-105 hover:bg-accent hover:text-primary focus:outline-none "
-            >
-              Skills that I know
-            </a>
+              >
+                Skills that I know
+              </a>
+            </div>
+            <div className="m-2 flex flex-row justify-center gap-4 p-4 ">
+              <a href="https://github.com/markadv/">
+                <IoLogoGithub className="h-16 w-16 fill-primary hover:fill-blue-700" />
+              </a>
+              <a href="https://www.linkedin.com/in/markadvento/">
+                <IoLogoLinkedin className="h-16 w-16 fill-primary hover:fill-blue-700" />
+              </a>
+            </div>
           </div>
         </div>
         <div className="z-0 w-5/6 md:w-1/2 lg:w-full lg:max-w-lg">
