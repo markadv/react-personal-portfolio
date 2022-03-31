@@ -16,4 +16,14 @@ export const projects = [
   },
 ];
 
-export const skills = ["JavaScript", "React", "Next.js", "Node", "GraphQL", "Tailwind"];
+export const skills = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Next.js",
+  "Node",
+  "GraphQL",
+  "Tailwind",
+  "Python",
+];

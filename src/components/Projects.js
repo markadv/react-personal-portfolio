@@ -13,7 +13,7 @@ export default function Projects() {
           <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 text-primary">
             Apps I've Built
           </h1>
-          <p className="text-secondary lg:w-2/3 mx-auto leading-relaxed text-base">
+          <p className="text-secondary text-xl lg:w-2/3 mx-auto leading-relaxed">
             Here are the projects that I have built or been a part of.
           </p>
         </div>
@@ -26,11 +26,11 @@ export default function Projects() {
                   className="inset-0 w-full h-64 object-cover object-center"
                   src={project.image}
                 />
-                <h1 className="title-font text-lg font-medium text-primary">{project.title}</h1>
-                <h2 className="tracking-widest text-m font-medium text-secondary mb-1">
+                <h1 className="title-font text-xl font-medium text-primary">{project.title}</h1>
+                <h2 className="tracking-widest text-lg font-medium text-secondary mb-1">
                   Made with {project.subtitle}
                 </h2>
-                <p className="leading-relaxed text-accent">{project.description}</p>
+                <p className="leading-relaxed text-m text-accent">{project.description}</p>
               </div>
             </a>
           ))}

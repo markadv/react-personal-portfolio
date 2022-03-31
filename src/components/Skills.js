@@ -12,7 +12,7 @@ export default function Skills() {
           <h1 className="sm:text-4xl text-3xl font-medium title-font text-primary mb-4">
             Skills &amp; Technologies
           </h1>
-          <p className="text-base text-secondary leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
+          <p className="text-xl text-secondary leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
             These are the skills and tech that I have learned.
           </p>
         </div>
@@ -21,7 +21,7 @@ export default function Skills() {
             <div key={skill} className="p-2 sm:w-1/2 w-full">
               <div className="bg-secondary rounded flex p-4 h-full items-center">
                 <BadgeCheckIcon className="text-accent w-6 h-6 flex-shrink-0 mr-4" />
-                <span className="title-font font-medium text-primary">{skill}</span>
+                <span className="title-font text-xl font-medium text-primary">{skill}</span>
               </div>
             </div>
           ))}

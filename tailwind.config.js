@@ -5,6 +5,7 @@ module.exports = {
       backgroundColor: {
         primary: "var(--color-bg-primary)",
         secondary: "var(--color-bg-secondary)",
+        accent: "var(--color-bg-accent)",
       },
       textColor: {
         accent: "var(--color-text-accent)",

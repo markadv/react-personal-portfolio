@@ -55,14 +55,14 @@ export default function About() {
             <a
               href="#contact"
               className="inline-flex text-accent bg-secondary border-0 py-2 px-6 focus:outline-none transition ease-in-out delay-50 
-              hover:bg-light- hover:scale-105 rounded text-lg hover:text-black"
+              hover:bg-accent hover:scale-105 rounded text-lg hover:text-primary"
             >
               Work With Me
             </a>
             <a
               href="#projects"
               className="ml-4 inline-flex text-white bg-gray-600 border-0 py-2 px-6 focus:outline-none transition ease-in-out delay-50 
-              hover:bg-gray-900 hover:scale-105 rounded text-lg hover:text-gray-200"
+              hover:bg-accent hover:scale-105 rounded text-lg hover:text-primary"
             >
               See My Past Work
             </a>
