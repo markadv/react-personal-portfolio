@@ -10,7 +10,7 @@ export default function About() {
       <div className="container mx-auto flex h-full w-screen flex-col items-center px-10 py-20 md:flex-row">
         <div className="mb-16 flex flex-col items-center text-center md:mb-0 md:w-1/2 md:items-start md:pr-16 md:text-left lg:flex-grow lg:pr-24">
           <div className="h-28">
-            <h1 className="text-3xl font-light text-primary sm:text-5xl">
+            <h1 className="2xl:5xl text-3xl font-light text-primary sm:text-3xl xl:text-4xl">
               <Typewriter
                 onInit={(typewriter) => {
                   typewriter
@@ -54,18 +54,18 @@ export default function About() {
           </p>
           <div className="flex justify-center">
             <a
-              href="#contact"
+              href="#projects"
               className="delay-50 inline-flex rounded border-0 bg-secondary py-2 px-6 text-lg text-accent transition 
               ease-in-out hover:scale-105 hover:bg-accent hover:text-primary focus:outline-none"
             >
-              Work With Me
+              See My Past Work
             </a>
             <a
-              href="#projects"
-              className="delay-50 ml-4 inline-flex rounded border-0 bg-gray-600 py-2 px-6 text-lg text-white transition 
-              ease-in-out hover:scale-105 hover:bg-accent hover:text-primary focus:outline-none"
+              href="#skills"
+              className="delay-50 ml-4 inline-flex rounded border-0 bg-secondary py-2 px-6 text-lg text-accent 
+              transition ease-in-out hover:scale-105 hover:bg-accent hover:text-primary focus:outline-none "
             >
-              See My Past Work
+              Skills that I know
             </a>
           </div>
         </div>
