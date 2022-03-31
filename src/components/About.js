@@ -6,10 +6,10 @@ export default function About() {
   const [isDark, setIsDark] = useDarkMode();
   return (
     <section id="about" className="h-screen bg-primary">
-      <div className="h-full w-screen container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
-        <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+      <div className="container mx-auto flex h-full w-screen flex-col items-center px-10 py-20 md:flex-row">
+        <div className="mb-16 flex flex-col items-center text-center md:mb-0 md:w-1/2 md:items-start md:pr-16 md:text-left lg:flex-grow lg:pr-24">
           <div className="h-28">
-            <h1 className="sm:text-5xl text-3xl font-light text-primary">
+            <h1 className="text-3xl font-light text-primary sm:text-5xl">
               <Typewriter
                 onInit={(typewriter) => {
                   typewriter
@@ -48,37 +48,37 @@ export default function About() {
               />
             </h1>
           </div>
-          <p className="text-xl mb-8 leading-relaxed text-accent">
+          <p className="mb-8 text-xl leading-relaxed text-accent">
             I'm a career-shifter who has recently started my journey as a programmer.
           </p>
           <div className="flex justify-center">
             <a
               href="#contact"
-              className="inline-flex text-accent bg-secondary border-0 py-2 px-6 focus:outline-none transition ease-in-out delay-50 
-              hover:bg-accent hover:scale-105 rounded text-lg hover:text-primary"
+              className="delay-50 inline-flex rounded border-0 bg-secondary py-2 px-6 text-lg text-accent transition 
+              ease-in-out hover:scale-105 hover:bg-accent hover:text-primary focus:outline-none"
             >
               Work With Me
             </a>
             <a
               href="#projects"
-              className="ml-4 inline-flex text-white bg-gray-600 border-0 py-2 px-6 focus:outline-none transition ease-in-out delay-50 
-              hover:bg-accent hover:scale-105 rounded text-lg hover:text-primary"
+              className="delay-50 ml-4 inline-flex rounded border-0 bg-secondary py-2 px-6 text-lg text-accent transition 
+              ease-in-out hover:scale-105 hover:bg-accent hover:text-primary focus:outline-none"
             >
               See My Past Work
             </a>
           </div>
         </div>
-        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 z-0">
+        <div className="z-0 w-5/6 md:w-1/2 lg:w-full lg:max-w-lg">
           <div className="relative">
             <img
-              className="cursor-pointer top-0 left-0 object-cover object-center rounded z-10"
+              className="top-0 left-0 z-10 max-h-96 cursor-pointer rounded object-cover object-center sm:max-h-full"
               alt="hero"
               src="./sephiroth_parta.png"
               onClick={(e) => setIsDark(!isDark)}
             />
             {isDark && (
               <img
-                className="cursor-pointer absolute top-0 left-0 object-cover object-center rounded z-10"
+                className="absolute top-0  left-0 z-10 max-h-96 cursor-pointer rounded object-cover object-center sm:max-h-full"
                 alt="hero"
                 src="./sephiroth_partb.png"
                 onClick={(e) => setIsDark(!isDark)}
