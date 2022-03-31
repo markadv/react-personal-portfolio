@@ -6,20 +6,24 @@
   --color-bg-primary: #2d3748;
   --color-bg-secondary: #283141;
   --color-bg-accent: #0784b5;
+  --color-bg-samurai: red;
   --color-text-primary: #f7fafc;
   --color-text-secondary: #e2e8f0;
   --color-text-accent: #0784b5;
   --color-border-primary: #ffffff;
+  --color-fill-primary: #ffffff;
 }
 
 .light {
   --color-bg-primary: #ffffff;
   --color-bg-secondary: #edf2f7;
   --color-bg-accent: #2b6cb0;
+  --color-bg-samurai: red;
   --color-text-primary: #2d3748;
   --color-text-secondary: #4a5568;
   --color-text-accent: #2b6cb0;
   --color-border-primary: #000000;
+  --color-fill-primary: #000000;
 }
 
 @tailwind base;

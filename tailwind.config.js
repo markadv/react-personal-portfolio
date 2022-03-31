@@ -6,6 +6,7 @@ module.exports = {
         primary: "var(--color-bg-primary)",
         secondary: "var(--color-bg-secondary)",
         accent: "var(--color-bg-accent)",
+        samurai: "var(--color-bg-samurai)",
       },
       textColor: {
         accent: "var(--color-text-accent)",
@@ -14,6 +15,9 @@ module.exports = {
       },
       borderColor: {
         primary: "var(--color-border-primary)",
+      },
+      fill: {
+        primary: "var(--color-fill-primary)",
       },
     },
   },
