@@ -8,7 +8,7 @@ export default function About() {
   const [isDark, setIsDark] = useDarkMode();
   return (
     <section id="about" className="bg-primary lg:h-screen">
-      <div className="container mx-auto flex h-full w-screen flex-col items-center px-10 py-20 md:flex-row">
+      <div className="container mx-auto flex h-full w-screen flex-col items-center px-10 sm:py-20 md:flex-row">
         <div className="mb-16 flex flex-col items-center text-center md:mb-0 md:w-1/2 md:items-start md:pr-16 md:text-left lg:flex-grow lg:pr-24">
           <div className="h-28">
             <h1 className="2xl:5xl text-3xl font-light text-primary sm:text-3xl xl:text-4xl">

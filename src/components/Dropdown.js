@@ -11,7 +11,7 @@ const Dropdown = ({ isOpen, toggle }) => {
       onClick={toggle}
     >
       <a
-        href="/"
+        href="/#"
         className="ransition p-4 text-xl text-primary delay-200 ease-in-out hover:scale-105 hover:bg-primary hover:text-accent"
       >
         About
