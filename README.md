@@ -1,4 +1,4 @@
-# Peersonal portfolio
+# Personal portfolio
 
 This is my personal portfolio build made in react.
 
