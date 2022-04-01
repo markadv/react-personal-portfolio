@@ -26,11 +26,15 @@ export default function Projects() {
                   className="inset-0 h-64 w-full rounded-md object-cover object-center"
                   src={project.image}
                 />
-                <h1 className="title-font text-xl font-medium text-primary">{project.title}</h1>
-                <h2 className="mb-1 text-lg font-medium tracking-widest text-secondary">
+                <h1 className="title-font text-xl font-medium text-primary transition ease-in-out hover:scale-105">
+                  {project.title}
+                </h1>
+                <h2 className="mb-1 text-lg font-medium tracking-widest text-secondary transition ease-in-out hover:scale-105">
                   Made with {project.subtitle}
                 </h2>
-                <p className="text-m leading-relaxed text-accent">{project.description}</p>
+                <p className="text-m leading-relaxed text-accent transition ease-in-out hover:scale-105">
+                  {project.description}
+                </p>
               </div>
             </a>
           ))}

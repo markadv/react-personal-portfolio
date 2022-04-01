@@ -20,8 +20,10 @@ export default function Skills() {
           {skills.map((skill) => (
             <div key={skill} className="w-full p-2 sm:w-1/2">
               <div className="flex h-full items-center rounded bg-secondary p-4">
-                <BadgeCheckIcon className="mr-4 h-6 w-6 flex-shrink-0 text-accent" />
-                <span className="title-font text-xl font-medium text-primary">{skill}</span>
+                <BadgeCheckIcon className="mr-4 h-6 w-6 flex-shrink-0 text-accent transition ease-in-out hover:scale-105" />
+                <span className="title-font text-xl font-medium text-primary transition ease-in-out hover:scale-105">
+                  {skill}
+                </span>
               </div>
             </div>
           ))}

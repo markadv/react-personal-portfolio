@@ -72,10 +72,10 @@ export default function About() {
             </div>
             <div className="m-2 flex flex-row justify-center gap-4 p-4 ">
               <a href="https://github.com/markadv/">
-                <IoLogoGithub className="h-16 w-16 fill-primary hover:fill-blue-700" />
+                <IoLogoGithub className="h-16 w-16 fill-primary hover:scale-105 hover:fill-blue-700" />
               </a>
               <a href="https://www.linkedin.com/in/markadvento/">
-                <IoLogoLinkedin className="h-16 w-16 fill-primary hover:fill-blue-700" />
+                <IoLogoLinkedin className="h-16 w-16 fill-primary hover:scale-105 hover:fill-blue-700" />
               </a>
             </div>
           </div>
