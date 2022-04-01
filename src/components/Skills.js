@@ -8,7 +8,7 @@ export default function Skills() {
       <div className="h-16"></div>
       <div className="container mx-auto h-full w-full px-5 py-10">
         <div className="mb-20 text-center">
-          <ChipIcon className="mb-4 inline-block w-10" />
+          <ChipIcon className="mb-4 inline-block w-10 hover:fill-accent" />
           <h1 className="title-font mb-4 text-3xl font-medium text-primary sm:text-4xl">
             Skills &amp; Technologies
           </h1>

@@ -3,7 +3,8 @@ import React from "react";
 const SamuraiSVG = ({ isDark, setIsDark }) => {
   return (
     <svg
-      className="top-0 left-0 z-10 cursor-pointer rounded fill-primary object-cover object-center hover:border-2 hover:border-primary hover:bg-samurai"
+      // top-0 left-0 z-10 cursor-pointer rounded fill-primary object-cover object-center hover:border-2 hover:border-primary hover:bg-samurai
+      className="top-0 left-0 z-10 cursor-pointer rounded fill-primary stroke-primary object-cover object-center transition-colors ease-in-out hover:stroke-red-700 hover:stroke-primary"
       viewBox="0 0 5000 5000"
       onClick={(e) => setIsDark(!isDark)}
     >

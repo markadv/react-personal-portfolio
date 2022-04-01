@@ -10,20 +10,22 @@
   --color-text-primary: #f7fafc;
   --color-text-secondary: #e2e8f0;
   --color-text-accent: #0784b5;
-  --color-border-primary: #ffffff;
-  --color-fill-primary: #ffffff;
+  --color-border-primary: rgb(243 244 246);
+  --color-fill-primary: rgb(243 244 246);
+  --color-fill-accent: #0784b5;
 }
 
 .light {
-  --color-bg-primary: #ffffff;
+  --color-bg-primary: #fff;
   --color-bg-secondary: #edf2f7;
   --color-bg-accent: #2b6cb0;
   --color-bg-samurai: red;
   --color-text-primary: #2d3748;
   --color-text-secondary: #4a5568;
   --color-text-accent: #2b6cb0;
-  --color-border-primary: #000000;
-  --color-fill-primary: #000000;
+  --color-border-primary: rgb(17 24 39);
+  --color-fill-primary: rgb(17 24 39);
+  --color-fill-accent: #2b6cb0;
 }
 
 @tailwind base;

@@ -18,6 +18,10 @@ module.exports = {
       },
       fill: {
         primary: "var(--color-fill-primary)",
+        accent: "var(--color-fill-accent)",
+      },
+      strokeWidth: {
+        primary: "16px",
       },
     },
   },
