@@ -13,9 +13,6 @@ export default function Projects() {
           <h1 className="title-font mb-4 text-3xl font-medium text-primary sm:text-4xl">
             Apps I've Built
           </h1>
-          <p className="mx-auto text-xl leading-relaxed text-secondary lg:w-2/3">
-            Here are the projects that I have built or been a part of.
-          </p>
         </div>
         <div className="-m-4 flex flex-wrap">
           {projects.map((project) => (
@@ -23,13 +20,13 @@ export default function Projects() {
               <div className="flex flex-col">
                 <img
                   alt="gallery"
-                  className="inset-0 h-64 w-full rounded-md object-cover object-center"
+                  className="inset-0 h-36 w-full rounded-md object-cover object-center"
                   src={project.image}
                 />
                 <h1 className="title-font text-xl font-medium text-primary transition ease-in-out hover:scale-105">
                   {project.title}
                 </h1>
-                <h2 className="mb-1 text-lg font-medium tracking-widest text-secondary transition ease-in-out hover:scale-105">
+                <h2 className="font-small mb-1 text-lg tracking-widest text-secondary transition ease-in-out hover:scale-105">
                   Made with {project.subtitle}
                 </h2>
                 <p className="text-m leading-relaxed text-accent transition ease-in-out hover:scale-105">

@@ -5,14 +5,14 @@
 .dark {
   --color-bg-primary: #2d3748;
   --color-bg-secondary: #283141;
-  --color-bg-accent: #0784b5;
+  --color-bg-accent: #66d9e8;
   --color-bg-samurai: red;
   --color-text-primary: #f7fafc;
   --color-text-secondary: #e2e8f0;
-  --color-text-accent: #0784b5;
+  --color-text-accent: #66d9e8;
   --color-border-primary: rgb(243 244 246);
   --color-fill-primary: rgb(243 244 246);
-  --color-fill-accent: #0784b5;
+  --color-fill-accent: #66d9e8;
 }
 
 .light {

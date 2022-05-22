@@ -82,10 +82,10 @@ const GameOfLife = () => {
   }, []);
 
   return (
-    <div className="bg-secondary">
+    <div className="bg-primary">
       <div className="h-16"></div>
       <div
-        className="w-full h-full justify-center"
+        className="h-full w-full justify-center"
         style={{
           //create the cols
           display: "grid",
@@ -95,7 +95,7 @@ const GameOfLife = () => {
         {grid.map((rows, i) =>
           rows.map((col, j) => (
             <div
-              className="bg-primary text-primary"
+              className="bg-secondary text-secondary"
               key={`${i}-${j}`}
               onClick={() => {
                 // when clicked, change value to 0 or 1, prdouce create a new mutable state
@@ -114,10 +114,10 @@ const GameOfLife = () => {
           )),
         )}
       </div>
-      <div className="flex flex-row gap-4 p-4 justify-center">
+      <div className="flex flex-row justify-center gap-4 p-4">
         <button
           className="
-        bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+        rounded border border-blue-500 bg-transparent py-2 px-4 font-semibold text-accent hover:border-transparent hover:bg-accent hover:text-white"
           onClick={() => {
             setRunning(!running);
             if (!running) {
@@ -130,7 +130,7 @@ const GameOfLife = () => {
         </button>
         <button
           className="
-        bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+        rounded border border-blue-500 bg-transparent py-2 px-4 font-semibold text-blue-700 hover:border-transparent hover:bg-blue-500 hover:text-white"
           onClick={() => {
             const rows = [];
             for (let i = 0; i < numRows; i++) {
@@ -142,7 +142,7 @@ const GameOfLife = () => {
           Random
         </button>
         <button
-          className="bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded"
+          className="rounded border border-red-500 bg-transparent py-2 px-4 font-semibold text-red-700 hover:border-transparent hover:bg-red-500 hover:text-white"
           onClick={() => {
             setGrid(generateEmptyGrid());
           }}

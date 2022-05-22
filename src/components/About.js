@@ -57,15 +57,15 @@ export default function About() {
             <div className="flex flex-row">
               <a
                 href="#projects"
-                className="delay-50 inline-flex rounded border-0 bg-secondary py-2 px-6 text-lg text-accent transition 
-              ease-in-out hover:scale-105 hover:bg-accent hover:text-primary focus:outline-none"
+                className="delay-50 inline-flex rounded border-0 bg-secondary py-2 px-6 text-lg text-accent shadow-md 
+              transition ease-in-out hover:scale-105 hover:bg-accent hover:text-primary focus:outline-none"
               >
                 See My Past Work
               </a>
               <a
                 href="#skills"
                 className="delay-50 ml-4 inline-flex rounded border-0 bg-secondary py-2 px-6 text-lg text-accent 
-              transition ease-in-out hover:scale-105 hover:bg-accent hover:text-primary focus:outline-none "
+              shadow-md transition ease-in-out hover:scale-105 hover:bg-accent hover:text-primary focus:outline-none"
               >
                 Skills that I know
               </a>

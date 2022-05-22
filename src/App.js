@@ -5,6 +5,8 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages";
 import GameOfLife from "./pages/gol";
 import Footer from "./components/Footer.js";
+import MineSweeper from "./pages/minesweeper";
+import NotFoundPage from "./pages/404.js";
 
 export default function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,6 +37,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/gameoflife" element={<GameOfLife />} />
+        <Route path="/minesweeper" element={<MineSweeper />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />
     </main>
