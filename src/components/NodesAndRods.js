@@ -3,7 +3,7 @@ import React from "react";
 const NodesAndRods = () => {
   return (
     <div>
-      <iframe
+      {/* <iframe
         id="webgl_iframe"
         frameborder="0"
         allow="autoplay; fullscreen; vr"
@@ -17,7 +17,8 @@ const NodesAndRods = () => {
         webkitallowfullscreen="true"
       >
         Nodes and Rods
-      </iframe>
+      </iframe> */}
+      Nodes and rods
     </div>
   );
 };
